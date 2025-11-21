@@ -1,4 +1,5 @@
 # VotingApp - Containerized Spring Boot Application
+<img width="1536" height="1024" alt="docker architectural image" src="https://github.com/user-attachments/assets/81895360-7788-4ca6-9f0d-331898498a7b" />
 
 This project demonstrates the containerization of a **VotingApp** built with **Spring Boot Java**, using **Docker** and **Docker Compose**. The application includes multiple services: the VotingApp backend, MySQL database, and PHPMyAdmin for database management, orchestrated with Docker Compose.
 
@@ -171,7 +172,9 @@ curl http://<EC2_PUBLIC_IP>:8080/api/votes
   ```
 
   4. Verified free space and restarted Docker Compose services.
-* **Solution:** Freed space before adding extra volumes to EC2. This ensured Docker containers could run without hitting storage limits.
+* **Solution:** Freed space before adding extra volumes to EC2.
+* EC2 instance-storage-volume-modify volume. 25Gib was added 
+* This ensured Docker containers could run without hitting storage limits.
 
 ---
 
