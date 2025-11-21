@@ -14,7 +14,8 @@ This project demonstrates the containerization of a **VotingApp** built with **S
 6. [Testing the Application](#testing-the-application)
 7. [Errors Encountered and How I Solved Them](#errors-encountered-and-how-i-solved-them)
 8. [Cleanup](#cleanup)
-9. [Notes](#notes)
+9. Pushing image to Docker hub
+10. [Notes](#notes)
 
 ---
 
@@ -182,6 +183,23 @@ Stop and remove containers, networks, and volumes:
 docker compose down -v
 docker system prune -f
 ```
+
+
+Pushing Images to Docker Hub
+1. Login to Docker Hub
+docker login
+2. Tag the image using your Docker Hub username
+
+My username: edidiongakpan18
+
+docker tag votingapp-image:v1 edidiongakpan18/votingapp-image:v1
+3. Push the image
+docker push edidiongakpan18/votingapp-image:v1
+4. Same steps was repeated for subsequent images
+5. Verify the image is available on Docker Hub
+
+Visit:
+https://hub.docker.com/u/edidiongakpan18
 
 ---
 
